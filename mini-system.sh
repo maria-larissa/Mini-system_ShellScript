@@ -18,35 +18,55 @@ while [[ $resposta == 1 ]]; do
 	echo "14 - Sair"
 
 	echo -e "\n Ao selecionar uma opção será exibido um manual de instruções de uso. \n"
-	echo -e "Informe a opção desejada: "
+	echo -n "Informe a opção desejada: "
 	read opcao
 
 	if [ $opcao == 1 ]; then
-		echo "******MANUAL DE INTRUÇÕES******"
-		bash opcao1.sh
+		echo -e "\n\t\t******MANUAL DE INTRUÇÕES******"
+		echo -e "Voce deverá informar dois números inteiros e será retornado qual o maior entre os dois e o valor da soma.\n"
+		echo -n "Digite o primeiro número: "
+		read num1
+		echo -n "Digite o segundo número: "
+		read num2
+		bash opcao1.sh $num1 $num2
 	elif [ $opcao == 2 ]; then
-		bash opcao2.sh
+		echo "******MANUAL DE INTRUÇÕES******"
+		echo -e "Você deverá informar o nome de um usuário e será retornado se o usuário é válido ou não no sistema.\n"
+		echo -n "Digite o nome do usuário: "
+		read user
+		bash opcao2.sh $user
 	elif [ $opcao == 3 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao3.sh
 	elif [ $opcao == 4 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao4.sh
 	elif [ $opcao == 5 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao5.sh
 	elif [ $opcao == 6 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao6.sh
 	elif [ $opcao == 7 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao7.sh
 	elif [ $opcao == 8 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao8.sh
 	elif [ $opcao == 9 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao9.sh
 	elif [ $opcao == 10 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao10.sh
 	elif [ $opcao == 11 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao11.sh
 	elif [ $opcao == 12 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao12.sh
 	elif [ $opcao == 13 ]; then
+		echo "******MANUAL DE INTRUÇÕES******"
 		bash opcao13.sh
 	elif [ $opcao == 14 ]; then
 		echo "SAINDO..."
