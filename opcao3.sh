@@ -26,3 +26,4 @@ for (( i=0; i<=($tam_vetor-1); i++ )); do
 	fi
 done
  
+
