@@ -1,6 +1,6 @@
 resposta=1
 while [[ $resposta == 1 ]]; do
-	echo -e "\n********MENU PRINCIPAL*********\n"
+	echo -e "\n\t\t********MENU PRINCIPAL*********\n"
 
 	echo "1 - Somar dois números inteiros e saber qual o maior."
 	echo "2 - Verificar se um usuário é válido no sistema"
@@ -17,66 +17,42 @@ while [[ $resposta == 1 ]]; do
 	echo "13 - Imprimir qual o shell mais utilizado detre os usuários válidos no sistema"
 	echo "14 - Sair"
 
-	echo "Ao selecionar uma opção será exibido um manual de instruções de uso."
+	echo -e "\n Ao selecionar uma opção será exibido um manual de instruções de uso. \n"
 	echo -e "Informe a opção desejada: "
 	read opcao
 
 	if [ $opcao == 1 ]; then
-		echo ""
-		
+		echo "******MANUAL DE INTRUÇÕES******"
+		bash opcao1.sh
 	elif [ $opcao == 2 ]; then
-		echo ""
-		
-		
+		bash opcao2.sh
 	elif [ $opcao == 3 ]; then
-		echo ""
-		
-		
+		bash opcao3.sh
 	elif [ $opcao == 4 ]; then
-		echo ""
-		
-		
+		bash opcao4.sh
 	elif [ $opcao == 5 ]; then
-		echo ""
-		
-		
+		bash opcao5.sh
 	elif [ $opcao == 6 ]; then
-		echo ""
-		
-		
+		bash opcao6.sh
 	elif [ $opcao == 7 ]; then
-		echo ""
-		
-
+		bash opcao7.sh
 	elif [ $opcao == 8 ]; then
-		echo ""
-		
-		
+		bash opcao8.sh
 	elif [ $opcao == 9 ]; then
-		echo ""
-		
-		
+		bash opcao9.sh
 	elif [ $opcao == 10 ]; then
-		echo ""
-		
-		
+		bash opcao10.sh
 	elif [ $opcao == 11 ]; then
-		echo ""
-		
-		
+		bash opcao11.sh
 	elif [ $opcao == 12 ]; then
-		echo ""
-		
-		
+		bash opcao12.sh
 	elif [ $opcao == 13 ]; then
-		echo ""
-		
-	
+		bash opcao13.sh
 	elif [ $opcao == 14 ]; then
 		echo "SAINDO..."
 		resposta=0
 	else
-		echo -e"\nOPÇÃO INVÁLIDA!\n"
+		echo -e  "\n OPÇÃO INVÁLIDA! \n"
 		continue
 	fi
 done
