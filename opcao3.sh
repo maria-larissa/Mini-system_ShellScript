@@ -14,7 +14,7 @@ cd "$1"
 
 mapfile -t arquivos < <(ls -1)
 tam_vetor=${#arquivos[@]}
-echo "tam=$tam_vetor"
+#echo "tam=$tam_vetor"
 
 for (( i=0; i<=($tam_vetor-1); i++ )); do
 	tipo=$(file -b ${arquivos[$i]})

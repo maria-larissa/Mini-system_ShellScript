@@ -1,18 +1,59 @@
-#analisa cada arquivo dentro da pasta
-for file in $(ls)
- do
-	#pula se for diretório ou o próprio arquivo
-	if [[ -d $file || $file = $BASH_SOURCE ]]
-	then
-		continue
+mapfile -t shells < <(getent passwd | cut -d ':' -f7)
+tam_vetor=${#shells[@]}
+maior=0
+id=0
+for (( i=0; i<=$tam_vetor-1 ; )); do
+	
+	if [ -z "${shells[$i]}" ]; then
+		i=$((i+1))
+		
+	else
+		aux=${shells[$i]}
+		aux1=1
+		
+		for (( j=0; j<=$tam_vetor ; j++ )); do
+			
+			if [ -z "${shells[$j]}" ]; then
+				j=$((j+1))
+			
+			else
+				if [ "$j" == "$i" ]; then
+					j=$((j+1))
+				fi
+				if [ "${shells[$j]}" == "${shells[$i]}" ]; then
+					aux1=$((aux1+1))
+					unset shells[$j]
+				fi
+			fi
+		done
+		
+		i=$((i+1))
+	
+		if [ "$i" == "0" ]; then
+			maior=$aux1
+			id=0
+		fi
+		
+		if [ $aux1 -gt $maior ]; then
+			maior=$aux1
+			id=$i
+		fi
+		
 	fi
+done
 
-	Fword=$(head -n1 $file | cut -d ' ' -f 1)
-
-	if [ -z $Ford ]; then
-		echo "Arquivo vazio!!!"
+cont=0
+for (( i=0 ; i<=$tam_vetor; i++ ));do
+	
+	if [ -z "${shells[$i]}" ];then
+		i=$((i+1))
+		cont=$((cont+1))
 	fi
 	
-	#mv move e renomeia
-	mv $file $Fword
+	cont=$((cont+1))
+	
+	if [ $cont -eq $id ]; then
+		echo ${shells[$i]}" => "$maior" usuarios"
+		break
+	fi
 done
