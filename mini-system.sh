@@ -83,10 +83,10 @@ while [[ $resposta == 1 ]]; do
 		echo -n "Digite a data de fim do semestre: "
 		read data_fi		
 		echo -n "Digite o id do 1º dia da semana: "
-		read sem1
+		read dia1
 		echo -n "Digite o id do 2º dia da semana: "
-		read sem2
-		bash opcao7.sh $data_ini $data_fi $sem1 $sem2
+		read dia2
+		bash opcao7.sh "$data_ini" "$data_fi" "$dia1 $dia2"
 		
 		
 	elif [ $opcao == 8 ]; then

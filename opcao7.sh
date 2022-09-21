@@ -1,35 +1,15 @@
-<<comment
-	É necessário inserir os dados na seguinte ordem:
-	1 - Data de início das aulas do semestre (ano/mês/dia)
-	2 - Data de termino das aulas do semestre (ano/mês/dia)
-	3 - O(s) número(s) equivalente aos dias da semana 
-		"1" Segunda-feira
-		"2" Terça-feira
-		"3" Quarta-feira
-		"4" Quinta-feira
-		"5" Sexta-feira
-
-
-	Ex:	 	bash Problema7.sh 2008/02/07 2008/07/05 1 3
-	Deve retornar as seguintes datas (dia/mes/ano): 
-		11/02/2008 13/02/2008 18/02/2008 20/02/2008 
-		25/02/2008 03/03/2008 05/03/2008 ...
-comment
-
-echo ""
-echo "A data de início do semestre é $1"
-echo ""
+echo -e "A data de início do semestre é $1\n\n"
 echo "Todas as datas de aulas"
 
-if [ $3 -eq 1 ]; then
+if [ "$3" == 1 ]; then
 	dia_ex="Monday"
-elif [ $3 -eq 2  ]; then
+elif [ "$3" == 2  ]; then
 	dia_ex="Tuesday"
-elif [ $3 -eq 3  ]; then
+elif [ "$3" == 3  ]; then
 	dia_ex="Wednesday"
-elif [ $3 -eq 4  ]; then 
+elif [ "$3" == 4  ]; then 
 	dia_ex="Thursday"
-elif [ $3 -eq 5  ]; then
+elif [ "$3" == 5  ]; then
 	dia_ex="Friday"
 fi
 
