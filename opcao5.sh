@@ -5,8 +5,6 @@ tamanho=$(du -hsb "${arquivo}" | cut -d '/' -f1)
 
 if [ -e "$existe" ]; then
 	echo "O Arquivo existe e seu tamanho em bytes é $tamanho"
-	echo ""
 else
-	echo "ARQUIVO NĀO EXISTE!"
-	echo ""
+	echo -e "\033[01;31mARQUIVO NĀO EXISTE!\033[00;37m"
 fi

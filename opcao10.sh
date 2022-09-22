@@ -1,4 +1,3 @@
-reposta="n"
 i=0
 while [ "$resposta" != "sair" ]; do
 	echo -n "Digite a palavra a ser adicionada na lista: "
