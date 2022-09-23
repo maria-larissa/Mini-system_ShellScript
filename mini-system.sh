@@ -29,7 +29,7 @@ while [[ $resposta == 1 ]]; do
 		read num1
 		echo -n "Digite o segundo número: "
 		read num2
-		bash opcao1.sh $num1 $num2
+		bash opcoes/opcao1.sh $num1 $num2
 		
 		
 	elif [ $opcao == 2 ]; then
@@ -38,7 +38,7 @@ while [[ $resposta == 1 ]]; do
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
 		echo -n "Digite o nome do usuário: "
 		read user
-		bash opcao2.sh $user
+		bash opcoes/opcao2.sh $user
 		
 		
 	elif [ $opcao == 3 ]; then
@@ -47,25 +47,25 @@ while [[ $resposta == 1 ]]; do
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
 		echo -n "Digite o caminho: "
 		read caminho
-		bash opcao3.sh $caminho
+		bash opcoes/opcao3.sh $caminho
 		
 		
 	elif [ $opcao == 4 ]; then
 		echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
 		echo "Você deverá informar um número e será retornado todos os numeros pares de 0 até o numero informado."
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-		bash opcao4.sh $num3
+		bash opcoes/opcao4.sh $num3
 		
 		
 	elif [ $opcao == 5 ]; then
 		echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
 		echo "Você deverá infromar o nome de um arquivo e será verificado se existe, caso sim também será retornado o seu tamaho em bytes."
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-		bash opcao5.sh $arquivo
+		bash opcoes/opcao5.sh $arquivo
 		
 		
 	elif [ $opcao == 6 ]; then
-		bash opcao6.sh
+		bash opcoes/opcao6.sh
 		
 		
 	elif [ $opcao == 7 ]; then
@@ -86,7 +86,7 @@ while [[ $resposta == 1 ]]; do
 		read sem1
 		echo -n "Digite o id do 2º dia da semana: "
 		read sem2
-		bash opcao7.sh $data_ini $data_fi $sem1 $sem2
+		bash opcoes/opcao7.sh $data_ini $data_fi $sem1 $sem2
 		
 		
 	elif [ $opcao == 8 ]; then
@@ -95,7 +95,7 @@ while [[ $resposta == 1 ]]; do
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
 		echo -n "Digite o caminho: "
 		read caminho1
-		bash opcao8.sh  $caminho1
+		bash opcoes/opcao8.sh  $caminho1
 		
 		
 	elif [ $opcao == 9 ]; then
@@ -109,14 +109,14 @@ while [[ $resposta == 1 ]]; do
 		read pal2
 		echo -n "Digite 3ª palavra: "
 		read pal3
-		bash opcao9.sh $pal1 $pal2 $pal3
+		bash opcoes/opcao9.sh $pal1 $pal2 $pal3
 		
 		
 	elif [ $opcao == 10 ]; then
 		echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
 		echo "Você ira informa uma lista de palavras,a cada palavra adicionada será retornada a lista ordenada das palavras, até que seja inserida a palavra 'sair'."
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-		bash opcao10.sh
+		bash opcoes/opcao10.sh
 		
 		
 	elif [ $opcao == 11 ]; then
@@ -132,9 +132,9 @@ while [[ $resposta == 1 ]]; do
 		echo -n "Digite um numero: "
 		read num5
 		if [[ $operador == '*' ]]; then
-			bash opcao11.sh $num4 '*' $num5
+			bash opcoes/opcao11.sh $num4 '*' $num5
 		else
-			bash opcao11.sh $num4 $operador $num5
+			bash opcoes/opcao11.sh $num4 $operador $num5
 		fi
 		
 
@@ -142,13 +142,13 @@ while [[ $resposta == 1 ]]; do
 		echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
 		echo "Será retornada uma lista com todos os usuários cadastrados no sistema e seus respectivos diretórios home."
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-		bash opcao12.sh
+		bash opcoes/opcao12.sh
 		
 	elif [ $opcao == 13 ]; then
 		echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
 		echo "Será acessado o arquivo /etc/passwd analisado e retornará o shell mais utilizado dentre os usuários existente no sistema."
 		echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-		bash opcao13.sh
+		bash opcoes/opcao13.sh
 		
 	elif [ $opcao == 14 ]; then
 		echo -e "\n\U0001F44B \033[01;37mSAINDO...\033[00;37m"
