@@ -20,16 +20,13 @@ O programa consiste em um mini-sistema onde são apresentadas varias opções pa
 
 ## Authors.
 
- Maria Larissa 
  [@Maria Larissa](https://github.com/maria-larissa)
  e-mail: maria.larissa@aluno.ufca.edu.br
  
  
- Nazareno Mateus
  [@Nazareno Mateus](https://github.com/nazamath)
  e-mail: nazareno.mateus@aluno.ufca.edu.br 
 
 
- Prof. orientador Ramon santos
- [@Ramon Nepomuceno](https://github.com/ramonn76)
+ Prof. orientador [@Ramon Nepomuceno](https://github.com/ramonn76)
  e-mail: ramon.nepomuceno@ufca.edu.br  
