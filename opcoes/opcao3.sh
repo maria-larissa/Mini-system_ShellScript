@@ -1,8 +1,8 @@
 saida=$(zenity --forms \
 --title="MANUAL DE INTRUÇÕES" \
---text="Você deverá passar caminho (completo) de \ 
-um diretorio e será listado todos os arquivos \ 
-existentes, destacando os diretórios (dir)." \
+--text="Você deverá passar caminho (completo) de um diretorio\n\
+e será listado todos os arquivos existentes,destacando\n\
+os subdiretórios (dir)." \
 --add-entry="Digite o caminho")
 
 
@@ -23,9 +23,11 @@ elif [ "$(file -b $saida)" == "directory" ]; then
 		for (( i=0; i<=($tam_vetor-1); i++ )); do
 		tipo=$(file -b ${arquivos[$i]})
 		if [ "$tipo" == "directory" ]; then
-			arq[$i]=$(echo "${arquivos[$i]}    |     directory")
+			aux=$(echo "${arquivos[$i]} | (dir)")
+			arq[$i]=$(echo "$aux\t\t")
 		else
-			arq[$i]=$(echo "${arquivos[$i]}")
+			aux=$(echo "${arquivos[$i]}")
+			arq[$i]=$(echo "$aux\t\t")
 		fi
 	done
 	

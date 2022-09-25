@@ -6,7 +6,7 @@ while [ $res != 1 -o $res != 2 -o $res != 3 -o $res != 4 ]; do
 	--text="01 - Exibir status da utilização das partições do sistema\n\
 02 - Exibir relação de usuários logados\n\
 03 - Exibir data/hora\n\
-04 - Sair" \
+04 - Volta para menu principal" \
 	--add-entry="Informe sua opção: ")
 	if [[ -z $res || $res -eq 4 ]]; then
 		exit

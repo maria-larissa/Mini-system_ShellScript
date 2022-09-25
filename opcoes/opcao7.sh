@@ -1,6 +1,6 @@
-saida=$(zenity --forms\
---title="MANUAL DE INTRUÇÕES"\
---text="Você deverá informar as datas de inicio e fim do semestre e os dias da semana em que\nhaverão aula da disciplina será retorna todas as datas que o laboratório deverá ser\nreservado durante sesmestre.\n\
+saida=$(zenity --forms \
+--title="MANUAL DE INTRUÇÕES" \
+--text="Você deverá informar as datas de inicio e fim do semestre e os dias da semana em que\nhaverão aula da disciplina será retorna todas as datas que o laboratório deverá ser\nreservado durante sesmestre.\n \
 \t\t\t1 - Segunda-feira\n \
 \t\t\t2 - Terça-feira\n \
 \t\t\t3 - Quarta-feira\n \
@@ -9,8 +9,8 @@ saida=$(zenity --forms\
 Certifique-se de que as datas estão no formato (ano/mes/dia) e os ids equivalentes\naos dias da semana são inteiro. \
 Ex: \n\t2008/02/07 \n\t2008/07/05 \n\t1 \n\t3\n \
 \tDeve retornar as seguintes datas:\n \
-\t\t2008/11/02 2008/13/02 2008/18/02 2008/20/02\n \
-\t\t2008/25/02 2008/27/02 2008/03/03/ 2008/05/03 ..." \
+\t\t2008/02/11 2008/02/13 2008/02/18 2008/02/20\n \
+\t\t2008/02/25 2008/02/27 2008/03/03 2008/03/05 ..." \
 --separator="," \
 --add-entry="Digite a data de inicio do semestre" \
 --add-entry="Digite a data de fim do semestre" \
@@ -126,8 +126,6 @@ else
 	fi
 
 	zenity --info \
-	--text="A data de início do semestre é $inicio.\n 
-	Todas as datas de aulas:\n $(echo ${datas[@]}) \n 
-	A data de termino do semestre é $final\n"
+	--text="A data de início do semestre é $inicio.\nTodas as datas de aulas:\n $(echo ${datas[@]}) \nA data de termino do semestre é $final\n"
 
 fi

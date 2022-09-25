@@ -7,11 +7,17 @@ saida=$(zenity --forms \
 			--add-entry="Digite um numero")
 			
 num1=$(echo $saida | cut -d ',' -f1)
-echo $num1
 operador=$(echo $saida | cut -d ',' -f2)
-echo $operador
 num2=$(echo $saida | cut -d ',' -f3)
-echo $num2
+
+if [[ -z $num1 && -z $operador && -z $num2 ]];then
+	exit
+fi
+
+if [[ -z $num1 || -z $operador || -z $num2 ]];then
+	zenity --info --title="Atenção" --text="Preencha todos os campos."
+	bash opcoes/opcao11.sh
+fi
 
 if [ "$operador" == "+" ]; then
 	zenity --info --text="A soma $num1 + $num2 é igual à $(($num1+$num2))."
