@@ -14,4 +14,4 @@ zenity --entry --title="Menu Principal" \
 13 - Imprimir qual o shell mais utilizado detre os usuários válidos no sistema
 14 - Sair\n\n
 Ao selecionar uma opção será exibido um manual de instruções de uso.\n
-Informe a opção desejada!"
+Informe a opção desejada"
