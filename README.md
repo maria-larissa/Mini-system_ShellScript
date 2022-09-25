@@ -8,6 +8,11 @@ O programa consiste em um mini-sistema onde são apresentadas varias opções pa
 * A lingua dominante no computador deve ser português(pt) ou inglês(en).
 
 
+##### **Instruction**
+* Baixar e descompactar a pasta.zip
+* Executar somente o arquivo "mini-system.sh".
+
+
 ##### **Tecnology**
  * GNU bash - Version 5.1.16(1)-release
  * GNU bash - Version 5.1.4(1)-release
