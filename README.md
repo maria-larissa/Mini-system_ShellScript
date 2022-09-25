@@ -18,7 +18,7 @@ O programa consiste em um mini-sistema onde são apresentadas varias opções pa
 * Nano - Version 5.4
 
 
-## Authors.
+## Authors
 
  [@Maria Larissa](https://github.com/maria-larissa)
  e-mail: maria.larissa@aluno.ufca.edu.br
