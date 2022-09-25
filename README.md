@@ -1,14 +1,37 @@
+# Mini-sistema feito com Shell Script
 
-# Mini-system_ShellScript
+O programa consiste em um mini-sistema onde são apresentadas varias opções para o usuário em forma de menu, essas opções são questões de uma lista confecciona na diciplina de Laboratório de programação do curso de Matemática Computacional da Universidade Federal do Cariri.
 
- Este é um mini-sistem para selecionar as questões de uma lista da diciplina de Laboratório de programação.
+##### **Rules**
+* O sistema deve ser LINUX.
+* É necessário ter o zenity instalado.
+* A lingua dominante no computador deve ser português(pt) ou inglês(en).
 
- Linguagem de programação utilizada.
- Shell Scripts (bash).
 
- Autores.
- Maria Larussa. e-mail: maria.larissa@aluno.ufca.edu.br
- Nazareno Mateus. e-mail: nazareno.mateus@aluno.ufca.edu.br 
+##### **Instruction**
+* Baixar e descompactar a pasta.zip
+* Executar somente o arquivo "mini-system.sh".
 
- Orientador.
- Ramon santos. e-mail: ramon.nepomuceno@ufca.edu.br  
+
+##### **Tecnology**
+ * GNU bash - Version 5.1.16(1)-release
+ * GNU bash - Version 5.1.4(1)-release
+
+
+##### **Text editor**
+* Gedit - Version 42.2
+* Nano - Version 5.4
+
+
+## Authors
+
+ [@Maria Larissa](https://github.com/maria-larissa)
+ e-mail: maria.larissa@aluno.ufca.edu.br
+ 
+ 
+ [@Nazareno Mateus](https://github.com/nazamath)
+ e-mail: nazareno.mateus@aluno.ufca.edu.br 
+
+
+ Prof. orientador [@Ramon Nepomuceno](https://github.com/ramonn76)
+ e-mail: ramon.nepomuceno@ufca.edu.br  
