@@ -13,13 +13,15 @@ tam_vetor=${#usuarios[@]}
 
 for ((i=0; i<=(tam_vetor-1); i++));  do
 
-	if [ $usuario == ${usuarios[$i]} ];	then
+	if [ "$usuario" == "${usuarios[$i]}" ];	then
 		user=$(echo "$saida é um usuário cadastrado.")
 		break
 
-	elif [ $i = $(($tam_vetor-1)) ];	then
+	elif [ "$i" == "$(($tam_vetor-1))" ];	then
 		user=$(echo "$saida não está cadastrado.")
 		break
+	else 
+		exit
 
 	fi
 
