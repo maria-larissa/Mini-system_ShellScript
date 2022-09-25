@@ -2,18 +2,18 @@
 
 O programa consiste em um mini-sistema onde são apresentadas varias opções para o usuário em forma de menu, essas opções são questões de uma lista confecciona na diciplina de Laboratório de programação do curso de Matemática Computacional da Universidade Federal do Cariri.
 
-####Rules
+#### **Rules**
 *O sistema deve ser LINUX.
 *É necessário ter o zenity instalado.
 *A lingua dominante no computador deve ser português(pt) ou inglês(en).
 
 
-###### Tecnology
+##### **Tecnology**
  *GNU bash - Version 5.1.16(1)-release
  *GNU bash - Version 5.1.4(1)-release
 
 
-###### Text editor
+##### **Text editor**
 *Gedit - Version 42.2
 *Nano - Version 5.4
 
