@@ -1,7 +1,6 @@
 opcao=$(bash menu.sh)  
 #if [[ $opcao > 0 && $opcao <14 ]] ; then 
 	while [ $opcao ]; do
-		echo "opcao=$opcao"
 		if [ $opcao == 1 ]; then
 			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
 			echo "Voce deverá informar dois números inteiros e será retornado qual o maior entre os dois e o valor da soma."
@@ -71,78 +70,37 @@ opcao=$(bash menu.sh)
 			opcao=$(bash menu.sh)
 			
 		elif [ $opcao == 8 ]; then
-			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
-			echo "Você deverá informar o caminho (completo) de um diretório e serão renomeados todos os arquivos de acordo com a primeira palavra encontrada no conteúdo."
-			echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-			echo -n "Digite o caminho: "
-			read caminho1
-			bash opcoes/opcao8.sh  $caminho1
+			bash opcoes/opcao8.sh 
 			opcao=$(bash menu.sh)
 			
-		elif [ $opcao == 9 ]; then
-			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
-			echo "Você deverá informar uma lista de 3 palavras e será retornado a lista ordenada."
-			echo -e "Ex: casa macaco dedo\nDeverá retornar: casa dedo macaco\n"
-			echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-			echo -n "Digite 1ª palavra: "
-			read pal1
-			echo -n "Digite 2ª palavra: "
-			read pal2
-			echo -n "Digite 3ª palavra: "
-			read pal3
-			bash opcoes/opcao9.sh $pal1 $pal2 $pal3
+		elif [ $opcao == 9 ]; then	
+			bash opcoes/opcao9.sh 
 			opcao=$(bash menu.sh)
 			
 		elif [ $opcao == 10 ]; then
-			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
-			echo "Você ira informa uma lista de palavras,a cada palavra adicionada será retornada a lista ordenada das palavras, até que seja inserida a palavra 'sair'."
-			echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
+
 			bash opcoes/opcao10.sh
 			opcao=$(bash menu.sh)
 			
 		elif [ $opcao == 11 ]; then
-			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
-			echo "Você deverá informar dois numeros inteiros e o perdaor artimético, como se tivesse utilizando uma calculadora, será retornado o resultado da operação."
-			echo "Ex: 2 + 6"
-			echo "Resultado: 8"
-			echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-			echo -n "Digite um numero: "
-			read num4
-			echo -n "Digite o operador: "
-			read operador
-			echo -n "Digite um numero: "
-			read num5
-			if [[ $operador == '*' ]]; then
-				bash opcoes/opcao11.sh $num4 '*' $num5
-			else
-				bash opcoes/opcao11.sh $num4 $operador $num5
-			fi
+			bash opcoes/opcao11.sh 
 			opcao=$(bash menu.sh)
 
-		elif [ $opcao == 12 ]; then
-			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
-			echo "Será retornada uma lista com todos os usuários cadastrados no sistema e seus respectivos diretórios home."
-			echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
+		elif [ $opcao == 12 ]; then	
 			bash opcoes/opcao12.sh
 			opcao=$(bash menu.sh)
 
 		elif [ $opcao == 13 ]; then 
-			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
-			echo "Será acessado o arquivo /etc/passwd analisado e retornará o shell mais utilizado dentre os usuários existente no sistema."
-			echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
 			bash opcoes/opcao13.sh
 			opcao=$(bash menu.sh)
 
 		elif [ $opcao == 14 ]; then
-			echo -e "\n\U0001F44B \033[01;37mSAINDO...\033[00;37m"
+			zenity --info --title="Autores"\
+			--text="\tMaria Larissa da Silva Andrade\nGraduanda em Matemática Computacional\n\n\tNazareno Mateus de Sousa\nGraduando em Matemática Computacional\n\n\t\t\t\t2022"
 			break
 		else
-			echo -e  "\U0001F4A5 \U0001F9D0 OPÇÃO INVÁLIDA! \U0001F4A5\n"
+			zenity --error --text="OPÇÃO INVÁLIDA!"
 			opcao=$(bash menu.sh)
 		fi
 
 	done
-
-#else 
-	#opcao=$(bash menu.sh)
-#fi
