@@ -10,8 +10,11 @@ O programa consiste em um mini-sistema onde são apresentadas varias opções pa
 
 ##### **Instruction**
 * Baixar e descompactar a pasta.zip
-* Executar somente o arquivo "mini-system.sh".
-
+* Abrir a pasta no CMD / prompt de comando
+* Executar somente o arquivo "mini-system.sh", através do comando
+```
+bash mini-system.sh.
+```
 
 ##### **Tecnology**
  * GNU bash - Version 5.1.16(1)-release
