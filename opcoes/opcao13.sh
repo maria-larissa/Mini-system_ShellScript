@@ -1,3 +1,6 @@
+zenity --info --title="MANUAL DE INTRUÇÕES" \
+--text="Será acessado e analisado o arquivo /etc/passwd,\n então retornará o shell mais utilizado dentre\n os usuários existente no sistema."
+
 mapfile -t shells < <(getent passwd | cut -d ':' -f7)
 tam_vetor=${#shells[@]}
 maior=0
@@ -41,7 +44,8 @@ for (( i=0 ; i<=$tam_vetor; i++ ));do
 	fi
 	cont=$((cont+1))
 	if [ $cont -eq $id ]; then
-		echo "O shell ${shells[$i]} é o mais utilizado, total de $maior usuarios."
+		zenity --info --title="Shell mais frequente" \
+		--text="O shell '${shells[$i]}' é o mais utilizado, total de $maior usuarios."
 		break
 	fi
 done
