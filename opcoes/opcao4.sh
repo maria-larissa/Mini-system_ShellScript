@@ -3,7 +3,6 @@ saida=$(zenity --forms \
 --text="Você deverá informar um número e será retornado \ 
  todos os numeros pares de 0 até o numero informado." \
 --add-entry="Digite um número")
-echo "$saida"
 
 if [ -z $saida ];then
 	exit
