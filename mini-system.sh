@@ -1,5 +1,4 @@
 opcao=$(bash menu.sh)  
-#if [[ $opcao > 0 && $opcao <14 ]] ; then 
 	while [ $opcao ]; do
 		if [ $opcao == 1 ]; then
 			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
@@ -49,24 +48,7 @@ opcao=$(bash menu.sh)
 			opcao=$(bash menu.sh)
 			
 		elif [ $opcao == 7 ]; then
-			echo -e "\n\t\t\033[01;37;45m******MANUAL DE INTRUÇÕES******\033[00;37m"
-			echo "Você deverá informar as datas de inicio e fim do semestre e os dias da semana em que haverão aula da disciplina será retorna todas as datas que o laboratório deverá ser reservado durante sesmestre."
-			echo -e "\t1 - Segunda-feira"
-			echo -e "\t2 - Terça-feira"
-			echo -e "\t3 - Quarta-feira"
-			echo -e "\t4 - Quinta-feira"
-			echo -e "\t5 - Sexta-feira"
-			echo -e "Ex: \nDigite a data de inicio do semestre: 2008/02/07 \n\tDigite a data de termino do semestre: 2008/07/05 \n\tDigite o id do 1º dia da semana: 1 \n\tDigite o id do 2º dia da semana: 3\nDeve retornar as seguintes datas (dia/mes/ano):\n\t2008/11/02 2008/13/02 2008/18/02 2008/20/02\n\t2008/25/02 2008/27/02 2008/03/03/ 2008/05/03 ...\n"
-			echo -e "\t\t\033[01;37;45m*******************************\033[00;37m\n"
-			echo -n "Digite a data de inicio do semestre: "
-			read data_ini
-			echo -n "Digite a data de fim do semestre: "
-			read data_fi		
-			echo -n "Digite o id do 1º dia da semana: "
-			read sem1
-			echo -n "Digite o id do 2º dia da semana: "
-			read sem2
-			bash opcoes/opcao7.sh $data_ini $data_fi $sem1 $sem2
+			bash opcoes/opcao7.sh 
 			opcao=$(bash menu.sh)
 			
 		elif [ $opcao == 8 ]; then
