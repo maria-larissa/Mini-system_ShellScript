@@ -7,7 +7,7 @@ O programa consiste em um mini-sistema onde são apresentadas varias opções pa
 
 #### **Rules**
 * O sistema deve ser LINUX.
-* É necessário ter o zenity instalado. Por padrão, o zenity já vem instalado em algumas distribuições, caso não o tenha instalado recomendo esse [tutorial](https://howtoinstall.co/en/zenity). Mas você pode pesquisar como instala-lo na sua distribuição.
+* É necessário ter o zenity instalado. Por padrão, o zenity já vem instalado em algumas distribuições, caso não o tenha instalado recomendo esse [tutorial](https://howtoinstall.co/en/zenity). Mas, você pode pesquisar como instala-lo na sua distribuição.
 * A lingua dominante no computador deve ser português(pt) ou inglês(en).
 
 
